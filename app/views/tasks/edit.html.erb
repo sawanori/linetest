@@ -1,0 +1,12 @@
+<h1>編集画面</h1>
+<%= form_tag(task_update_path,method: :post) do%>
+<div>
+  <div>
+    <%= text_area_tag :task, @task.task %>
+  </div>
+  <div>
+    <%= submit_tag '編集'%>
+    <%= link_to '一覧画面',tasks_index_path(@task) %>
+  </div>
+</div>
+<% end %>

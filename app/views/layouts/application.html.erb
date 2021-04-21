@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>TodoAppRenew</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body>
+  <% if  notice.present?%>
+  <aside>
+    <%= notice %>
+  </aside>
+  <% end %>
+  <% if alert.present? %>
+  <aside>
+    <%= alert %>
+  </aside>
+  <% end %>
+  <%= image_tag  "S__2080915.jpg",
+   style: "vertical-align:bottom;
+   margin:10px;
+   width:100px;"%>
+  <%= yield %>
+
+</body>
+
+</html>
